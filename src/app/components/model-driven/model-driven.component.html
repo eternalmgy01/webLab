@@ -1,0 +1,26 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <p>
+    <label for="firstname">First Name </label>
+    <input type="text" id="firstname" name="firstname" formControlName="firstname" [(ngModel)]="contact.firstname">
+  </p>
+
+  <p>
+    <label for="lastname">Last Name </label>
+    <input type="text" id="lastname" name="lastname" formControlName="lastname" [(ngModel)]="contact.lastname">
+  </p>
+
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" formControlName="email" [(ngModel)]="contact.email">
+  </p>
+  <p>
+    <label for="email">Password </label>
+    <input type="password" id="password" name="password" formControlName="password" [(ngModel)]="contact.password">
+  </p>
+
+    <button type="submit">Submit</button>
+  <button type="button" (click)="contactForm.reset()">Reset</button>
+</form>
+
+

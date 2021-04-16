@@ -1,0 +1,28 @@
+<form #newForm="ngForm" (ngSubmit)="onSubmit(newForm.value)">
+  <p>
+  <label>First Name </label>
+  <input name="name" type="text" required ngModel>
+  </p>
+  <p>
+  <label>Surname </label>
+  <input name="surname" type="text" required ngModel>
+  </p>
+  <p>
+  <label>Login</label>
+  <input name="login" type="text" required ngModel>
+  </p>
+  <p>
+  <label>E-mail</label>
+  <input name="email" type="email" required ngModel>
+  </p>
+  <p>
+    <label>City</label>
+    <input name="city" type="text" required ngModel>
+  </p>
+
+  <button type="submit">Submit</button>
+  <button type="button" (click)="newForm.reset()">Reset</button>
+
+
+
+</form>
